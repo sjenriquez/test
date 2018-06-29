@@ -1,2 +1,2 @@
-foo:bar
-test:tag
+foo=bar
+test=tag
