@@ -10,7 +10,7 @@ pipeline {
                         [
                             $class: 'DatadogJobProperty',
                             tagFile: 'tags.txt'
-                        ]
+                        ],
                         [
                             $class: 'DatadogJobProperty',
                             tagProperties: "groovy=tag"
