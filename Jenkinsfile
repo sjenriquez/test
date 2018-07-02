@@ -5,12 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                properties([
-                  [
-                    $class: 'DatadogJobProperty',
-                    tagFile: 'tags.txt'
-                  ]
-                ])
+                script{
+                    properties([
+                        [
+                            $class: 'DatadogJobProperty',
+                            tagFile: 'tags.txt'
+                        ]
+                    ])
+                }
             }
         }
         stage('Test') {
