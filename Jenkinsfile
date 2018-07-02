@@ -1,18 +1,18 @@
 pipeline {
     agent any
 
-    script {
-        properties([
-            [
-                $class: 'DatadogJobProperty',
-                tagProperties: "groovy=tag"
-            ]
-        ])
-    }
-
     stages {
         stage('Build') {
             steps {
+                    script {
+                        properties([
+                            [
+                                $class: 'DatadogJobProperty',
+                                tagProperties: "groovy=tag"
+                            ]
+                        ])
+                    }
+
                 echo 'Building..'
             }
         }
