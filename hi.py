@@ -1,5 +1,5 @@
 def a():
-    print("hi mom")
+    print("hi mom, hi")
 
 def b():
    print("bye")
